@@ -1,0 +1,56 @@
+.project {
+    width: 450px;
+    background-color: #252527;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+}
+
+.viewBtn {
+    background-color: #eeeef5;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.projectTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.projectInfo {
+    padding: 25px 20px;
+}
