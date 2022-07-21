@@ -1,27 +1,49 @@
-.footer {
-    background-color: #d4ffd3;
-}
+@import "../common/styles/saas/variables";
+@import "../common/styles/saas/mixins";
 
-.footerContainer {
+.footer {
+  background-color: $bgColor;
+  min-height: 29vh;
+  display: flex;
+  align-items: flex-end;
+
+  .footerContainer {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+
+    .footerTitle {
+      @include text($titleFontFamily, 13px, 1.8);
+    }
+
+    .socialIcons {
+      height: 100%;
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+
+        & img {
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+        }
+      }
+    }
+
+    .rights {
+      margin-top: 30px;
+      @include text($textFontFamily, 13px, 1.8);
+    }
+  }
+
 }
 
-.title {
-    background-color: #eeeef5;
-}
 
-.socialIcons {
-    width: 250px;
-    background-color: #d6d6d6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.icon {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-}
+
+

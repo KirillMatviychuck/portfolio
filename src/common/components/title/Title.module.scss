@@ -1,27 +1,32 @@
+@import "../../styles/saas/variables";
+@import "../../styles/saas/mixins";
+
 .title {
-    margin: 0 0 30px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 36px;
-    line-height: 1.2;
-    letter-spacing: 5px;
-    position: relative;
-}
+  margin: 0 0 30px;
+  @include text($nameFontFamily, 1.3em, 1.2);
+  font-weight: 400;
+  color: $textColor;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  position: relative;
 
-.title h2 {
-    margin: 0;
-    font-size: 1em;
-}
-
-.title::after {
+  &::after {
     content: '';
     position: absolute;
-    background-color: #4e93e6;
+    background-color: $textColor;
     width: 55px;
     height: 1px;
     left: 50%;
-    bottom: -30px;
+    bottom: 10px;
     transform: translate(-50%, 50%);
+  }
+
+  .title h2 {
+    margin: 0;
+    font-size: 1em;
+  }
 }
+
+
+
+

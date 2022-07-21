@@ -1,25 +1,23 @@
+@import "../common/styles/saas/variables";
+
 .myProjectsBlock {
-    background-color: #1f1f20;
+    background-color: $bgColor;
     padding: 100px 0;
-}
 
-.projectsContainer {
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-}
+    .projectsContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
 
-.projectItems {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    align-items: flex-start;
-}
-
-@media screen and (max-width: 1126px) {
-    .projectItems {
-        justify-content: center;
+        .projectItems {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            @media screen and (max-width: 1126px) {
+                justify-content: center;
+            }
+        }
     }
 }

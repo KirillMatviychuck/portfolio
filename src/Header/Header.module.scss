@@ -1,7 +1,11 @@
+@import "../common/styles/saas/mixins.scss";
+
 .header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: aqua;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    @include flexAlignEnd();
+    color: #fff;
+    background-color: $bgSecondColor;
     height: 80px;
 }

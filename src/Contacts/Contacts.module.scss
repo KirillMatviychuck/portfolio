@@ -1,29 +1,77 @@
-.contactBlock {
-    background-color: #ffd6d5;
-}
+@import "../common/styles/saas/mixins";
+@import "../common/styles/saas/variables";
 
-.contactsContainer {
+.contactsBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 45vh;
+  background-color: $bgSecondColor;
+
+  .contactsContainer {
+    min-height: 300px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
+
+    .contactForm {
+      min-height: 200px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .inputsBlock {
+        display: flex;
+
+        & input {
+          color: $textColor;
+          border: 1px solid #5b626e;
+          outline: none;
+          background-color: inherit;
+          height: 30px;
+          width: 230px;
+
+          &:focus {
+            border: 1px solid #fff;
+          }
+        }
+
+        & input[type="email"], & input[type="text"] {
+          @include text($nameFontFamily, 1em, 0);
+          text-align: center;
+        }
+      }
+
+      & textarea {
+        font-family: 'DM Sans', sans-serif;;
+        font-size: 1em;
+        color: $textColor;
+        background-color: inherit;
+        width: 467px;
+        height: 100px;
+        resize: none;
+        outline: none;
+
+        &:focus {
+          border: 1px solid #fff;
+        }
+      }
+
+      .submitBtn {
+        @include text($nameFontFamily, 1em, 0);
+        height: 30px;
+        width: 467px;
+        border: 1px solid #5b626e;
+        outline: none;
+        background-color: inherit;
+
+        &:hover {
+          border: 1px solid #fff;
+        }
+      }
+    }
+
+  }
 }
 
-.title {
-    background-color: #eeeef5;
-}
-
-.contactForm {
-    width: 50%;
-    background-color: #d6d6d6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contactForm input, .contactForm textarea {
-    width: 100%;
-}
-
-.submitBtn {
-    padding: 10px 20px;
-    background-color: #eeeef5;
-}

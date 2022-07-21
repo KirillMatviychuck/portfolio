@@ -1,10 +1,54 @@
+@import "../../common/styles/saas/variables";
+@import "../../common/styles/saas/mixins";
+
 .skill {
-    width: 250px;
-    background-color: brown;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #4f4f4f;
+  border-radius: 5px;
+  width: 250px;
+  min-height: 200px;
+  background-color: $bgColor;
+  box-shadow: 0 0 4.5px 4.5px rgba(116, 116, 141, 0.71);
+
+  .icon {
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+
+  .skillsTitle {
+    @include text($nameFontFamily, 11px, 0);
+    letter-spacing: 1px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #737373;
+      width: 55px;
+      height: 1px;
+      left: 50%;
+      bottom: -7px;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  .description {
+    @include text($nameFontFamily, 16px, 0);
+    padding-top: 30px;
+  }
+
+
 }
 
-.icon {
-    height: 60px;
-    width: 60px;
-    background-color: white;
-}
+
+

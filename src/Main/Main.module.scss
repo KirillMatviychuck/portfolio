@@ -1,19 +1,35 @@
-.container {
-    flex-wrap: wrap;
-}
+@import "../common/styles/saas/mixins";
+@import "../common/styles/saas/variables";
 
 .mainBlock {
     height: 100vh;
-    background-color: #5a6565;
+    background-color: $bgColor;
+
+    .container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .description {
+            background-color: $bgColor;
+            & h1 {
+                @include text($nameFontFamily, 40px, 0);
+                color: $textColor;
+                letter-spacing: 4px;
+            }
+            & p {
+                @include text($textFontFamily, 20px, 0);
+                color: #737373;
+                line-height: 2em;
+                letter-spacing: 4px;
+            }
+        }
+        .photo {
+            width: 300px;
+            height: 400px;
+            background-color: $bgSecondColor;
+        }
+    }
 }
 
-.description {
-    width: 300px;
-    background-color: #f7f7f7;
-}
 
-.photo {
-    width: 300px;
-    height: 400px;
-    background-color: #f7f7f7;
-}
+
