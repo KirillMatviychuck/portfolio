@@ -1,0 +1,15 @@
+@import "../../common/styles/saas/mixins";
+@import "../../common/styles/saas/variables";
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-right: 200px;
+    & a {
+        @include text($textFontFamily, 15px, 0);
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 1.2px;
+    }
+}

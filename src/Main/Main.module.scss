@@ -2,33 +2,56 @@
 @import "../common/styles/saas/variables";
 
 .mainBlock {
-    height: 100vh;
-    background-color: $bgColor;
+  height: 100vh;
+  background-color: $bgColor;
 
-    .container {
-        justify-content: space-around;
-        flex-wrap: wrap;
+  .container {
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-        .description {
-            background-color: $bgColor;
-            & h1 {
-                @include text($nameFontFamily, 40px, 0);
-                color: $textColor;
-                letter-spacing: 4px;
-            }
-            & p {
-                @include text($textFontFamily, 20px, 0);
-                color: #737373;
-                line-height: 2em;
-                letter-spacing: 4px;
-            }
-        }
-        .photo {
-            width: 300px;
-            height: 400px;
-            background-color: $bgSecondColor;
-        }
+    .description {
+      background-color: $bgColor;
+
+      & h1 {
+        @include text($nameFontFamily, 40px, 0);
+        color: $textColor;
+        letter-spacing: 4px;
+      }
+
+      & p {
+        @include text($textFontFamily, 20px, 0);
+        color: #737373;
+        line-height: 2em;
+        letter-spacing: 4px;
+      }
     }
+
+    .image {
+      position: relative;
+      z-index: 1;
+
+      .photo {
+        width: 300px;
+        height: 400px;
+        background-color: $bgSecondColor;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 105%;
+          width: 102%;
+          border: 5px solid dodgerblue;
+          left: 10px;
+          top: -15px;
+          z-index: -1;
+        }
+      }
+    }
+
+  }
 }
 
 
