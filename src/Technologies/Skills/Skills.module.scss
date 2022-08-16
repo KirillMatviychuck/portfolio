@@ -9,10 +9,11 @@
   justify-content: center;
   border: 1px solid #4f4f4f;
   border-radius: 5px;
-  width: 250px;
+  width: 200px;
   min-height: 200px;
   background-color: $bgColor;
-  box-shadow: 0 0 4.5px 4.5px rgba(116, 116, 141, 0.71);
+  box-shadow: 0 0 0.5px 0.5px rgba(116, 116, 141, 0.71);
+  transform: rotate(45deg);
 
   .icon {
     margin-bottom: 15px;
@@ -20,15 +21,19 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    right: 40px;
     height: 50px;
     width: 50px;
     border-radius: 25px;
+    transform: rotate(-45deg);
   }
 
   .skillsTitle {
     @include text($nameFontFamily, 11px, 0);
     letter-spacing: 1px;
     position: relative;
+    bottom: 15px;
+    transform: rotate(-45deg);
 
     &::after {
       content: '';
@@ -39,12 +44,17 @@
       left: 50%;
       bottom: -7px;
       transform: translate(-50%, 50%);
+
     }
   }
 
   .description {
+    position: relative;
+    left: 20px;
+    bottom: 30px;
     @include text($nameFontFamily, 16px, 0);
     padding-top: 30px;
+    transform: rotate(-45deg);
   }
 
 

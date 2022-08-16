@@ -4,6 +4,7 @@
     position: sticky;
     top: 0;
     z-index: 2;
+    opacity: 0.95;
     @include flexAlignEnd();
     color: #fff;
     background-color: $bgSecondColor;

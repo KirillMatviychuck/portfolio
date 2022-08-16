@@ -7,6 +7,8 @@ import htmlCss from "../assets/images/data.png";
 import unitTests from "../assets/images/test2.png";
 import materialUI from "../assets/images/graphic-design-icon-5.jpg";
 import {useState} from "react";
+//use require to import the module
+const Fade = require("react-reveal/Fade")
 
 export const Technologies = () => {
     const react = {
@@ -22,21 +24,23 @@ export const Technologies = () => {
         backgroundImage: `url(${materialUI})`,
     }
     const [skillState, setSkillState] = useState([
-        {title: 'DEVELOPMENT', description: 'React, Redux, REST API etc', img: react},
-        {title: 'FOUNDATION', description: 'JS, TS, HTML5, CSS3, SCSS', img: html},
+        {title: 'DEVELOPMENT', description: 'React, Redux', img: react},
+        {title: 'FOUNDATION', description: 'JS, TS, HTML, CSS', img: html},
         {title: 'TESTING', description: 'Unit Tests, Storybook', img: tests},
         {title: 'DESIGN', description: 'Material UI, Ant-Design', img: design}
-        ])
+    ])
 
     return (
         <div className={classes.technologiesBlock} id={'skill'}>
             <div className={`${styleContainer.container} ${classes.technologiesContainer}`}>
-                <Title text={'Skills'} />
-                <div className={classes.technologies}>
-                    <div className={classes.technologiesFirstBlock}>
-                        {skillState.map(sk => <Skills title={sk.title} description={sk.description} img={sk.img} />)}
+                <Title text={'Skills'}/>
+                <Fade bottom>
+                    <div className={classes.technologies}>
+                        <div className={classes.technologiesFirstBlock}>
+                            {skillState.map(sk => <Skills title={sk.title} description={sk.description} img={sk.img}/>)}
+                        </div>
                     </div>
-                </div>
+                </Fade>
             </div>
         </div>
     )
