@@ -6,13 +6,14 @@ type PropsType = {
     title: string
     description: string
     style: {backgroundImage: string}
+    urlAddress: string
 }
 
-export const ProjectItem: React.FC<PropsType> = ({title, description, style}) => {
+export const ProjectItem: React.FC<PropsType> = ({title, description, style, urlAddress}) => {
     return (
         <div className={classes.project}>
             <div className={classes.image} style={style}>
-                <button className={classes.viewBtn}>View</button>
+                <a href={urlAddress} className={classes.viewBtn}>View</a>
             </div>
             <div className={classes.projectInfo}>
                 <h3 className={classes.projectTitle}>{title}</h3>

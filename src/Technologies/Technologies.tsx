@@ -6,7 +6,6 @@ import reactRedux from "../assets/images/react.png";
 import htmlCss from "../assets/images/data.png";
 import unitTests from "../assets/images/test2.png";
 import materialUI from "../assets/images/graphic-design-icon-5.jpg";
-import {useState} from "react";
 //use require to import the module
 const Fade = require("react-reveal/Fade")
 
@@ -23,12 +22,12 @@ export const Technologies = () => {
     const design = {
         backgroundImage: `url(${materialUI})`,
     }
-    const [skillState, setSkillState] = useState([
+    const skillState = [
         {title: 'DEVELOPMENT', description: 'React, Redux', img: react},
         {title: 'FOUNDATION', description: 'JS, TS, HTML, CSS', img: html},
         {title: 'TESTING', description: 'Unit Tests, Storybook', img: tests},
         {title: 'DESIGN', description: 'Material UI, Ant-Design', img: design}
-    ])
+    ]
 
     return (
         <div className={classes.technologiesBlock} id={'skill'}>
