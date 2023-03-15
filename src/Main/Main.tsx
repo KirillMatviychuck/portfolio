@@ -1,9 +1,11 @@
 import classes from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import portfolioPhoto from '../assets/photo/portfolioPhoto.jpg'
+// @ts-ignore
+import ReactTypingEffect from 'react-typing-effect';
+import React from "react";
 //use require to import the module
 const Fade = require("react-reveal/Fade")
-
 
 export const Main = () => {
     const myPhoto = {
@@ -16,7 +18,13 @@ export const Main = () => {
                     <div className={classes.description}>
                         <p>HELLO, I'M</p>
                         <h1>KIRILL MATVIICHUK</h1>
-                        <p>FRONT-END DEVELOPER</p>
+                        <p>
+                            <ReactTypingEffect
+                                text={["FRONT-END DEVELOPER"]}
+                                eraseSpeed={50}
+                            />
+                        </p>
+                        {/*<p>FRONT-END DEVELOPER</p>*/}
                     </div>
                 </Fade>
                 <Fade right>
